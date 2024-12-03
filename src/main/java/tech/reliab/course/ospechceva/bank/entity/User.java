@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.*;
+
+@Getter
+@Setter
 public class User {
 
     private int id;
@@ -20,58 +24,6 @@ public class User {
         this.fullName = fullName;
         this.birthDate = birthDate;
         this.job = job;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public double getMonthlyIncome() {
-        return monthlyIncome;
-    }
-
-    public List<CreditAccount> getCreditAccounts() {
-        return creditAccounts;
-    }
-
-    public List<PaymentAccount> getPaymentAccounts() {
-        return paymentAccounts;
-    }
-
-    public List<Bank> getBanks() {
-        return banks;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public void setMonthlyIncome(double monthlyIncome) {
-        this.monthlyIncome = monthlyIncome;
-    }
-
-    public void setCreditRating(int creditRating) {
-        this.creditRating = creditRating;
-    }
-
-    public void setCreditAccounts(List<CreditAccount> creditAccounts) {
-        this.creditAccounts = creditAccounts;
-    }
-
-    public void setPaymentAccounts(List<PaymentAccount> paymentAccounts) {
-        this.paymentAccounts = paymentAccounts;
-    }
-
-    public void setBanks(List<Bank> banks) {
-        this.banks = banks;
     }
 
     @Override

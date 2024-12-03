@@ -2,6 +2,10 @@ package tech.reliab.course.ospechceva.bank.entity;
 
 import java.time.LocalDate;
 
+import lombok.*;
+
+@Getter
+@Setter
 public class Employee {
 
     private int id;
@@ -14,7 +18,8 @@ public class Employee {
     private boolean canIssueLoans;
     private double salary;
 
-    public Employee(String fullName, LocalDate birthDate, String position, Bank bank, boolean remoteWork, BankOffice bankOffice, boolean canIssueLoans, double salary) {
+    public Employee(String fullName, LocalDate birthDate, String position, Bank bank, boolean remoteWork,
+            BankOffice bankOffice, boolean canIssueLoans, double salary) {
         this.fullName = fullName;
         this.birthDate = birthDate;
         this.position = position;
@@ -23,26 +28,6 @@ public class Employee {
         this.bankOffice = bankOffice;
         this.canIssueLoans = canIssueLoans;
         this.salary = salary;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public Bank getBank() {
-        return bank;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
     }
 
     @Override

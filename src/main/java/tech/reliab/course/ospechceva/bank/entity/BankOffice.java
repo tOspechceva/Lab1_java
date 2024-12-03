@@ -1,5 +1,10 @@
 package tech.reliab.course.ospechceva.bank.entity;
 import tech.reliab.course.ospechceva.bank.enums.BankOfficeStatus;
+
+import lombok.*;
+
+@Getter
+@Setter
 public class BankOffice {
 
     private int id;
@@ -14,7 +19,8 @@ public class BankOffice {
     private double officeMoney;
     private double rentCost;
 
-    public BankOffice(String name, String address, boolean canPlaceAtm, boolean canIssueLoan, boolean cashWithdrawal, boolean cashDeposit, double rentCost, Bank bank) {
+    public BankOffice(String name, String address, boolean canPlaceAtm, boolean canIssueLoan, boolean cashWithdrawal,
+            boolean cashDeposit, double rentCost, Bank bank) {
         this.name = name;
         this.address = address;
         this.canPlaceAtm = canPlaceAtm;
@@ -22,30 +28,6 @@ public class BankOffice {
         this.cashWithdrawal = cashWithdrawal;
         this.cashDeposit = cashDeposit;
         this.rentCost = rentCost;
-    }
-
-    public void setStatus(BankOfficeStatus status) {
-        this.status = status;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setOfficeMoney(double officeMoney) {
-        this.officeMoney = officeMoney;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     @Override

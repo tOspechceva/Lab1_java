@@ -1,5 +1,9 @@
 package tech.reliab.course.ospechceva.bank.entity;
 
+import lombok.*;
+
+@Getter
+@Setter
 public class PaymentAccount {
 
     private int id;
@@ -11,26 +15,6 @@ public class PaymentAccount {
         this.user = user;
         this.bank = bank;
         this.balance = 0;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public Bank getBank() {
-        return bank;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setBank(Bank bank) {
-        this.bank = bank;
     }
 
     @Override
