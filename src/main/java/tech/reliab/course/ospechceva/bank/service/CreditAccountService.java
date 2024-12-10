@@ -1,26 +1,21 @@
 package tech.reliab.course.ospechceva.bank.service;
 
-import tech.reliab.course.ospechceva.bank.entity.Bank;
 import tech.reliab.course.ospechceva.bank.entity.CreditAccount;
-import tech.reliab.course.ospechceva.bank.entity.Employee;
-import tech.reliab.course.ospechceva.bank.entity.PaymentAccount;
-import tech.reliab.course.ospechceva.bank.entity.User;
+import tech.reliab.course.ospechceva.bank.model.CreditAccountRequest;
 
-import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 public interface CreditAccountService {
 
-    CreditAccount createCreditAccount(User user, Bank bank, LocalDate startDate, int loanTermMonths,
-                                      double loanAmount, double interestRate, Employee employee,
-                                      PaymentAccount paymentAccount);
+    CreditAccount createCreditAccount(CreditAccountRequest creditAccountRequest);
 
-    Optional<CreditAccount> getCreditAccountById(int id);
+    CreditAccount getCreditAccountById(int id);
+
+    CreditAccount getCreditAccountDtoById(int id);
 
     List<CreditAccount> getAllCreditAccounts();
 
-    void updateCreditAccount(int id, Bank bank);
+    CreditAccount updateCreditAccount(int id, int bankId);
 
-    void deleteCreditAccount(int accountId, int userId);
+    void deleteCreditAccount(int id);
 }

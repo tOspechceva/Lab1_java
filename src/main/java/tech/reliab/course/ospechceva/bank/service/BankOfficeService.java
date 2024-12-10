@@ -1,22 +1,21 @@
 package tech.reliab.course.ospechceva.bank.service;
 
-import tech.reliab.course.ospechceva.bank.entity.Bank;
 import tech.reliab.course.ospechceva.bank.entity.BankOffice;
+import tech.reliab.course.ospechceva.bank.model.BankOfficeRequest;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface BankOfficeService {
 
-    BankOffice createBankOffice(String name, String address, boolean canPlaceAtm,
-                                boolean canIssueLoan, boolean cashWithdrawal, boolean cashDeposit,
-                                double rentCost, Bank bank);
+    BankOffice createBankOffice(BankOfficeRequest bankOfficeRequest);
 
-    Optional<BankOffice> getBankOfficeById(int id);
+    BankOffice getBankOfficeById(int id);
+
+    BankOffice getBankDtoOfficeById(int id);
 
     List<BankOffice> getAllBankOffices();
 
-    void updateBankOffice(int id, String name);
+    BankOffice updateBankOffice(int id, String name);
 
-    void deleteBankAtm(int officeId, int bankId);
+    void deleteBankAtm(int id);
 }
