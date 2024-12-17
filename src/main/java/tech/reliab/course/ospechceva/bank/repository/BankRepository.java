@@ -7,5 +7,9 @@ import java.util.Optional;
 
 public interface BankRepository extends JpaRepository<Bank, Integer> {
 
+    Optional<Bank> findById(int id);
+
     void deleteById(int id);
+
+    Optional<Bank> findByName(String name);
 }

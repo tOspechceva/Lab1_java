@@ -107,4 +107,6 @@ public class BankAtmServiceImpl implements BankAtmService {
     public void deleteBankAtm(int id) {
         bankAtmRepository.deleteById(id);
     }
+
+
 }
